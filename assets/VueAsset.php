@@ -5,14 +5,10 @@ namespace app\assets;
 use yii\web\AssetBundle;
 class VueAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = '@npm/vue/dist';
     public $css = [
     ];
     public $js = [
-        '@npm/vue/dist/vue.min.js',
-    ];
-    public $depends = [
-        'yii\web\JqueryAsset',
+        'vue.min.js',
     ];
 }
