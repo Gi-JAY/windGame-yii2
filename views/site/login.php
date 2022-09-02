@@ -6,6 +6,7 @@
 
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
+use yii\helpers\Url;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -37,11 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="form-group">
             <div class="offset-lg-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                <?= Html::a(Html::submitButton('Register', ['class' => 'btn btn btn-secondary', 'name' => 'register-button']), ['url'=>['/user/create']]) ?>
+                <?= Html::a(Html::button('Register', ['class' => 'btn btn btn-secondary', 'name' => 'register-button']), Url::to(['/user/create'])) ?>
             </div>
         </div>
-
-    <?php ActiveForm::end(); ?>
+        
+        <?php ActiveForm::end(); ?>
 
     <div class="offset-lg-1" style="color:#999;">
         You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
