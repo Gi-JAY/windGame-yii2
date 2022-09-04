@@ -10,6 +10,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 VueAsset::register($this);
@@ -51,6 +52,7 @@ VueAsset::register($this);
                     'Logout (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
+                . Html::a(Html::button('會員修改'), Url::to(['user/update', 'id' => Yii::$app->user->identity->id]))
                 . Html::endForm()
                 . '</li>'
             )
