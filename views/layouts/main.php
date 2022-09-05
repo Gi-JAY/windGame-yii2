@@ -52,10 +52,10 @@ VueAsset::register($this);
                     'Logout (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
-                . Html::a(Html::button('會員修改'), Url::to(['user/update', 'id' => Yii::$app->user->identity->id]))
                 . Html::endForm()
                 . '</li>'
-            )
+            ),
+            Yii::$app->user->isGuest ? '' : ['label' => '會員修改', 'url' => ['user/update', 'id' => Yii::$app->user->identity->id]] 
         ],
     ]);
     NavBar::end();
