@@ -1,8 +1,6 @@
 <?php
-
 namespace app\assets\class1\roles;
-
-use app\assets\skills\skills;
+use app\assets\class1\skills\Skills;
 
 class BlackBoss extends BaseRole
 {

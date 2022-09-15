@@ -2,6 +2,8 @@
 
 namespace app\assets\class1\roles;
 
+use app\assets\class1\skills\Skills;
+
 abstract class BaseRole
 {
     private $name;
@@ -20,5 +22,5 @@ abstract class BaseRole
         $this->mission = $mission;
     }
 
-    public abstract function getRoleOfSkills();
+    public abstract function getRoleOfSkills(Skills $skills);
 }
